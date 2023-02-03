@@ -16,15 +16,16 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 //
 
-app.get("/",async(req,res)=>{
-    res.send("Hello From chatGPT")
-})
+// app.get("/",async(req,res)=>{
+//     res.send("Hello From chatGPT")
+// })
 
 //api
 app.post("/ChatWithGvm",async(req,res)=>{
     try{
         //`${prompt}`,
         // debugger
+        console.log('propmpt',req.body.prompt);
         const {prompt}=req.body;
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
