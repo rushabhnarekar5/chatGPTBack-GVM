@@ -11,7 +11,7 @@ dist/
 *.class
 
 # env files
-*.env
+.env
 
 # Compiled Python bytecode
 *.py[cod]

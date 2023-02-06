@@ -11,7 +11,8 @@ app.use(cors())
 
 //ChatGPT Configuration
 const configuration = new Configuration({
-  apiKey: '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',
+    apiKey: process.env.OPENAI_API_KEY,
+
 });
 const openai = new OpenAIApi(configuration);
 //
